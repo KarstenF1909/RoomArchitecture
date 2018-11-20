@@ -23,7 +23,9 @@ public class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.WordVi
     private final LayoutInflater mInflater;
     private List<Word> mWords; // Cached copy of words
 
-    WordListAdapter(Context context) { mInflater = LayoutInflater.from(context); }
+    WordListAdapter(Context context) {
+        mInflater = LayoutInflater.from(context);
+    }
 
     @Override
     public WordViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -42,7 +44,7 @@ public class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.WordVi
         }
     }
 
-    void setWords(List<Word> words){
+    void setWords(List<Word> words) {
         mWords = words;
         notifyDataSetChanged();
     }
